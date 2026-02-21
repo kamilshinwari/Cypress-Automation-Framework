@@ -2,25 +2,24 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
 
-  env:{
+  env: {
     application_URL: 'https://www.saucedemo.com/',
   },
 
   allowCypressEnv: false,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
-    reportDir:'cypress/reports/sauce-demo-ui-report',
-    overwrite:true,
-    autoOpen:false,
-    saveAllAttempts:false,
-    embeddedScreenshots:true,
-    inlineAssets:true,
-    showPassed:true,
-    charts: true,
-    reportPageTitle: 'Sauce Demo UI tests',
+    reportDir: 'cypress/reports/sauce-demo-ui-report',
+    overwrite: true,
+    autoOpen: false,
+    saveAllAttempts: false,
     embeddedScreenshots: true,
     inlineAssets: true,
-    saveAllAttempts: false,
+    showPassed: true,
+    charts: true,
+    reportPageTitle: 'Sauce Demo UI tests',
+    html: true,
+    json: false,
   },
 
   e2e: {
@@ -28,7 +27,7 @@ module.exports = defineConfig({
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
       return config;
-      
+
     },
   },
 });
