@@ -9,7 +9,8 @@ module.exports = defineConfig({
   allowCypressEnv: false,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
-    reportDir: 'cypress/reports/sauce-demo-ui-report',
+    reportDir: 'cypress/reports',
+    reportFilename: 'index',
     overwrite: true,
     autoOpen: false,
     saveAllAttempts: false,
