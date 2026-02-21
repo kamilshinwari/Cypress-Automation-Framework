@@ -37,3 +37,10 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
+
+      - name: Upload Cypress Test Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cypress-test-report
+          path: cypress/reports/sauce-demo-ui-report

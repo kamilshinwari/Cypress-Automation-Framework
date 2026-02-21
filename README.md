@@ -60,6 +60,7 @@ This project uses **GitHub Actions** for continuous integration. The workflow is
 - **Artifacts**: 
   - **Screenshots**: Automatically uploaded if a test fails.
   - **Videos**: Always uploaded for every CI run.
+  - **Test Reports**: Mochawesome HTML reports are uploaded for every CI run.
 
 ### Artifacts Access:
 After a CI run finishes, navigate to the **Actions** tab in GitHub, select the latest run, and scroll down to the **Artifacts** section to download screenshots or videos.
