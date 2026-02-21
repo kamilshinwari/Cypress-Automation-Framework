@@ -1,0 +1,25 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+        env:
+          # Pass GitHub Secrets as Cypress environment variables
+          CYPRESS_VALID_USERNAME: ${{ secrets.VALID_USERNAME }}
+          CYPRESS_VALID_PASSWORD: ${{ secrets.VALID_PASSWORD }}
+          # If you want to use your specific script, you can uncomment the next line
+          # command: npm run cypress:test

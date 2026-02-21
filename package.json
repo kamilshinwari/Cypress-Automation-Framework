@@ -1,0 +1,17 @@
+{
+  "name": "cypress_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:test": "cypress run --spec cypress/e2e/SauceDemo/*.cy.js --headed --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^13.17.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
+  }
+}
